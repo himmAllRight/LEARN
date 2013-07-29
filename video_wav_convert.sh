@@ -22,7 +22,7 @@ echo -e '\n \n' # Space
 # Strips the audio of each file and makes a wav file using ffmpeg.
 for f in *.$filetype;
 do
-ffmpeg -i "$f" -f wav -vn "${f%%.$filetype}_VidAudio.wav" # the convert command
+ffmpeg -i "$f" -f wav -vn -ar 44100 "${f%%.$filetype}_VidAudio.wav" # the convert command
 done
 
 echo -e '\n Conversion Complete. \n'  # End of script

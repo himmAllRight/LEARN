@@ -1,4 +1,6 @@
 #!/bin/bash
+# 7/30/2013
+#
 # Uses ffmpeg to convert video files in a list into .wav files.
 # To run, simply run script with the file extension of the video files as the first
 # argument.
@@ -17,12 +19,21 @@ do
 echo $f
 done
 
-echo -e '\n \n' # Space
+echo -e '\n' # Space
 
-# Strips the audio of each file and makes a wav file using ffmpeg.
-for f in *.$filetype;
-do
-ffmpeg -i "$f" -f wav -vn -ar 44100 "${f%%.$filetype}_VidAudio.wav" # the convert command
-done
-
+read -r -p "Would you like to continue? [Y/n] " response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]
+then
+	# for each file in directory of specified file type..
+	for f in *.$filetype;
+	do
+	# Converts files using ffmpeg
+	ffmpeg -i "$f" -f wav -vn -ar 44100 "${f%%.$filetype}_VidAudio.wav" 
+	done
 echo -e '\n Conversion Complete. \n'  # End of script
+
+else
+
+echo -e '\n Exiting Script.'
+
+fi

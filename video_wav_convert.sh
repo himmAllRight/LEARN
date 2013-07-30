@@ -10,6 +10,7 @@
 # To convert all the .m4v video files in the directory to .wav audio files.
 
 filetype=$1
+sampleRate=44100  # Change number to change sampling rate
 
 echo -e '\n \n Stripping audio for following files:\n --------------------------------------'
 
@@ -28,7 +29,7 @@ then
 	for f in *.$filetype;
 	do
 	# Converts files using ffmpeg
-	ffmpeg -i "$f" -f wav -vn -ar 44100 "${f%%.$filetype}_VidAudio.wav" 
+	ffmpeg -i "$f" -f wav -vn -ar $sampleRate  "${f%%.$filetype}_VidAudio.wav" 
 	done
 echo -e '\n Conversion Complete. \n'  # End of script
 

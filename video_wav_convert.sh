@@ -1,5 +1,5 @@
 #!/bin/bash
-# 8/01/2013
+# 8/02/2013
 #
 # Uses ffmpeg to convert video files in a list into .wav files.
 # To run, simply run script with the file extension of the video files as the first

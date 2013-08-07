@@ -45,6 +45,8 @@ scp –r Documents/file_with_vids arrayzilla@arrayzilla.neuro.brown.edu:/path/
 Ex:
 scp arrayzilla@arrayzulla.neuro.brown.edu:/packageLocaion/videoAudioPackage_PACKAGEDATE.tar.gz /Home/Documents/file/
 
+5. To unzip the package in Mac/Linux, locate it in ther terminal and enter the
+   following command: "tar -zxf packageNAME.tar.gz"
 
 Windows Users:
 - Windows users will have to install a program such as WinSCP
@@ -67,6 +69,7 @@ Windows Users:
 4. When the script is done running, to pull the package from the remote to your 
    computer, just drag the newly generated tar.gz package to a location on your
    computer in WinSCP.
+5. Unzip the package using a program like WinRAR.
 
 
 When running the script on a remote machine, you will have to connect to the 

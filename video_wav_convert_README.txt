@@ -96,6 +96,9 @@ Some helpful hints:
   directory.
 - Hitting TAB will auto complete a command (if unique) and double tapping TAB
   will display possible options (if not unique).
+- To change the directory, type "cd directory/path/"
+	- To move back a directory, use the path ".." Ex: "cd .."
+- To copy file, use the "cp" command. Ex: "cp filename.txt /pather/toMove/"
 
 *At this point, remote users can continue with the process of running the script
 as normal.
